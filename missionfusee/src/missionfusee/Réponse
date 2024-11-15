@@ -1,0 +1,26 @@
+Exercice 4: 
+J'observe que lorsque je vais créer un objet par exemple saturnV, je vais avoir quels constructeurs est appelés. 
+Si je viens a créer un objet des classes FCargo ou FAstronaute, le constructeur appelé est d'abord celui de la superclasse "Fusee" 
+suivi de leurs constructeurs respectifs.
+
+Exemple : 
+
+Superclasse : 
+
+Appel du constructeur Fusee(nom, masse, poussee, qtcarburant, consommation) 
+
+Classe dérivée :
+
+Appel du constructeur FAstronaute(nom, masse, poussee, qtcarburant, consommation, altitude, nombreEquipage)
+
+
+
+Superclasse : 
+
+Appel du constructeur Fusee(nom, masse, poussee, qtcarburant, consommation)
+
+Classe dérivée : 
+
+Appel du constructeur FCargo(nom, masse, poussee, qtcarburant, consommation, altitude, poidsChargement, typeChargement)
+
+

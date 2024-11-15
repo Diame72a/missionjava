@@ -1,0 +1,56 @@
+Exercice 5 : 
+
+Trouver les erreurs :
+
+	package encapsulation;
+	
+	public class A {
+		public int puba;
+		protected int proa; // accessible seulement dans le meme package ou dans une classe fille.
+		private int pria; // manque getters et setters
+	
+		public void Affiche() {
+		}
+	}
+	
+	package encapsulation;
+	
+	public class B extends A {
+		public int pubb;
+		protected int prob;
+		private int prib;
+	
+		public void test() {
+			pria = 1;   // pria est en private donc inaccessible, il faut mettre des getters et setters pour pria et fait setPria();
+		}
+	}
+	
+	package encapsulation;
+	
+	public class Encapsulation {
+		public static void main(String []args){
+	A monA=new A();
+	B monB=new B();
+	monA.puba=1;
+	monA.proa=2; // proa protected accessible que par le même package ou dans une classe fille ici c'est le cas mais sinon erreur
+	monA.pria=3; // pria private, donc accessible que dans la classe A
+	monB.puba=1;
+	monB.proa=2; // proa protected accessible que par le même package ou dans une classe fille ici c'est le cas mais sinon erreur
+	monB.pria=3; // pria private, donc accessible que dans la classe A
+	monA.Affiche();
+	 }
+	}
+
+Erreur: on créer un objet qu'on appelle B, mais les attributs utilisés sont ceux de l'objet A donc incohérence dans le code !
+
+
+
+Différence entre public, private et protected : 
+
+Public : On peut récupérer les attributs, les méthodes dans toutes les autres classes.
+Private : Accéssibilté des attributs et méthodes que dans la classe qui les déclarent et ne peuvent pas être accédés par d'autres classes. 
+Protected :Attributs et méthodes accessibles que dans le même package ou dans une classe fille, ne peut pas être hérités ou accédés par d'autres classes.
+
+
+
+
